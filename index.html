@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel ="stylesheet" href = "style.css"> 
+</head>
+<body>
+    <div class="background">
+        <div class="blur-overlay"></div>
+    </div>
+
+    <div class="content">
+        <div class="box-1">
+            <header class="form-header"> 
+                <h1>Request For A Consultation</h1>
+                <p>Want to collab or hire me as a fake photographer? Fill out the form below for more detail</p>
+            </header>
+        </div>
+
+        <form action = "" method="post" class = "sign-up">
+            <div class = "form-name">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="First Name" required />  
+                <input type="text" id= "name" name="name" placeholder = "Surname" required /> 
+            </div>
+
+            <div class ="email">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class = "number">
+                <label for="number">Phone:</label>
+                <input type="tel" id="number" name="number">
+            </div>
+
+            <div class="comment">
+                <label for="comment">Details about the event:</label>
+                <textarea placeholder="e.g wedding, birthday event.. " minlength="5" maxlength="200" cols="50%" rows="10%" ></textarea>
+            </div>
+        </form>
+    </div>
+      
+   
+</body>
+</html>
