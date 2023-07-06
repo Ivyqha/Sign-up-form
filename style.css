@@ -76,6 +76,7 @@
 }
 
 input {
+    appearance: none;
     outline: none; 
     width: 269px;
     min-width: 0; 
@@ -83,14 +84,23 @@ input {
     margin-left: 20px;
     margin-bottom: 10px;
     flex-grow: 1;
-}
-
-input[type="email"],
-input[type="text"], 
-input[type="tel"] {
-    appearance: none;
     border: 1px solid rgb(59, 59, 59);
     border-radius: 3px;
+}
+
+input:valid {
+    border: 2px solid rgb(149, 240, 144);
+}
+
+input:focus:invalid {
+    border: 2px solid red;
+}
+
+.error  {
+    font-size: 12px; 
+    color: red; 
+    position: absolute;
+    margin-left: 75px;
 }
 
 textarea{ 
@@ -132,7 +142,7 @@ fieldset {
     margin-bottom: 20px;
 }
 
-.submit { 
+button[type="submit"] { 
     width: 100px;
     height: 30px;
     text-align: center;
@@ -148,6 +158,11 @@ fieldset {
     display: flex; 
     justify-content: center;
 }
+
+button[type="submit"]:hover { 
+    background-color: rgb(196, 196, 196);
+    color: rgb(68, 68, 68);
+} 
 
 footer { 
    margin: 30px; 
@@ -165,6 +180,10 @@ footer {
 
     .box-1 { 
         margin-top: 15em;
+    }
+
+    .error {
+        margin: 0;
     }
 
     label[for="email"],
@@ -190,4 +209,8 @@ footer {
     }
 }
 
-- add outline for validation on inputs 
+/*
+
+- add own validation note when the space is empty 
+
+*/

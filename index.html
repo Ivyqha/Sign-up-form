@@ -15,7 +15,7 @@
         <div class="box-1">
             <header class="form-header"> 
                 <h1>Request For A Consultation</h1>
-                <p>Want to collab or hire me as a fake photographer? Fill out the form below for more detail</p>
+                <p>Want to collab or hire me as a fake photographer? Fill out the form below for more detail (UK based only)</p>
             </header>
         </div>
 
@@ -29,20 +29,21 @@
             <div class ="email"> 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <div id="email-error" class="error"></div>
             </div>
 
             <div class = "number">
                 <label for="number">Phone:</label>
-                <input type="tel" id="number" name="number">
+                <input type="tel" id="number" name="number" required>
             </div>
 
             <div class="comment">
                 <label for="comment">Details about the event:</label>
-                <textarea placeholder="e.g wedding, birthday event.. " minlength="5" maxlength="200" cols="200px" rows="10px" ></textarea>
+                <textarea placeholder="e.g wedding, birthday event.. " maxlength="200" cols="200px" rows="10px" ></textarea>
             </div>
 
             <div class="button">
-            <button type="submit" class="submit">Submit</button>
+            <button type="submit">Submit</button>
             </div>
         </form>
 
@@ -51,7 +52,20 @@
         </footer>
 
     </div>
-      
    
 </body>
+
+<script>
+    const email = document.querySelector ("#email"); 
+    const emailError = document.querySelector ("#email-error"); 
+
+    email.addEventListener("input", function (event) {
+        if (email.validity.typeMismatch) {
+            emailError.textContent = "Please enter a valid email address. E.g johnsmith@email.com"; 
+        } else { 
+            emailError.textContent = ""; 
+        }
+    }); 
+
+</script>
 </html>
