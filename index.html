@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale="1.0">
     <title>Sign Up</title>
     <link rel ="stylesheet" href = "style.css"> 
 </head>
@@ -20,13 +20,13 @@
         </div>
 
         <form action = "" method="post" class = "sign-up">
-            <div class = "form-name">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="First Name" required />  
-                <input type="text" id= "name" name="name" placeholder = "Surname" required /> 
-            </div>
+            <fieldset class = "form-name">
+                <label for="fname">Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="First Name" required />  
+                <input type="text" id= "sname" name="sname" placeholder = "Surname" required /> 
+            </fieldset>
 
-            <div class ="email">
+            <div class ="email"> 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="you@example.com" required>
             </div>
@@ -38,13 +38,17 @@
 
             <div class="comment">
                 <label for="comment">Details about the event:</label>
-                <textarea placeholder="e.g wedding, birthday event.. " minlength="5" maxlength="200" cols="50%" rows="10%" ></textarea>
+                <textarea placeholder="e.g wedding, birthday event.. " minlength="5" maxlength="200" cols="200px" rows="10px" ></textarea>
             </div>
 
             <div class="button">
             <button class="submit">Submit</button>
             </div>
         </form>
+
+        <footer>
+            <p>By Ivy Ha</p>
+        </footer>
     </div>
       
    
